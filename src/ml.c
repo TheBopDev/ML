@@ -183,39 +183,6 @@ double fnd_afn_binary_step(double d_input)
 }
 
 
+/* EOF ml.c*/
 
 
-// Testing functions !!!!!!!!!!!!!
-int fni_test_fnd_afn_mean(void)
-{
-	// In this case, mean = 3
-	const int i_num_elements = 5;
-	double ad_test_array[i_num_elements];
-
-	for(int i = 0; i < i_num_elements; i++)
-	{
-		ad_test_array[i] = 1.0 * (i+1);
-	}
-
-	double *pad_arr_doubles = ad_test_array;
-
-	double d_ad_test_array_mean = fnd_afn_mean(pad_arr_doubles, i_num_elements);
-
-	printf("The array mean is: %f\n", d_ad_test_array_mean);
-
-	if(3 == d_ad_test_array_mean)
-	{
-		return 0; // Test passed. 
-	}
-	else return 1; // Test case did not pass.
-
-	/* end of function */
-};
-
-int fni_test_fnd_afn_sigmoid(void)
-{
-	// Test value = 1.2;
-	double d_afn_sigmoid = fnd_afn_sigmoid(1.2);
-	printf("Sigmoid of 1.2 = %f", d_afn_sigmoid);
-	return 0;
-}

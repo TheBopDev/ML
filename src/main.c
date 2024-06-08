@@ -30,15 +30,8 @@ int main(int argc, char **argv[])
 
 
 	/* Unit testing */
-	double d_test_input = 0.69;
-	double ad_test_array[4];
-	ad_test_array[0] = 1.1;
-	ad_test_array[1] = 2.0;
-	ad_test_array[2] = 3.2;
-	ad_test_array[3] = 4.4;
-	double *pad_test_array = ad_test_array;
-
-	uint8_t u8_test_afn_mean = fnu8_test_afn_mean(pad_test_array, 4);
+	// Test all activation functions.
+	uint16_t u16_test_afn_all = fnu16_test_afn_all();
 	
 
 
