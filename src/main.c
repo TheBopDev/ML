@@ -44,19 +44,6 @@ int main(int argc, char **argv[])
 
 
 
-	// Testing stuff
-
-	double d_test_data = 0.93;
-	double d_out = 0;
-
-	printf("Test data: %f\n", d_test_data);
-	for (int i = 0; i < 10; i++)
-	{
-		d_out = fnd_afn_function_single_input(i, d_test_data);
-		printf("Output: %f\n", d_out);
-	}
-
-	
 	// Exit success
 	return 0;
 }
