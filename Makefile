@@ -47,6 +47,7 @@ EXECUTABLE = myprog
 SOURCES = \
 $(SRC_DIR)/main.c \
 $(SRC_DIR)/ml.c \
+$(SRC_DIR)/unittest.c \
 $(INC_DIR)/ml.h \
 #$(INC_DIR)/algorithms.h \
 

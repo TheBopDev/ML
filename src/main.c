@@ -7,10 +7,9 @@
 #include <stdint.h>
 
 #include "../inc/ml.h"
+#include "../inc/unittest.h"
 //#include "../inc/algorithms.h"
 
-
-int fni_test_fnd_afn_mean(void);
 
 int main(int argc, char **argv[])
 {
@@ -30,12 +29,22 @@ int main(int argc, char **argv[])
 
 
 
+	/* Unit testing */
+	double d_test_input = 0.69;
+	double ad_test_array[4];
+	ad_test_array[0] = 1.1;
+	ad_test_array[1] = 2.0;
+	ad_test_array[2] = 3.2;
+	ad_test_array[3] = 4.4;
+	double *pad_test_array = ad_test_array;
+
+	uint8_t u8_test_afn_mean = fnu8_test_afn_mean(pad_test_array, 4);
+	
+
 
 
 
 	// Testing stuff
-
-	int i_test = fni_test_fnd_afn_mean();
 
 	double d_test_data = 0.93;
 	double d_out = 0;
