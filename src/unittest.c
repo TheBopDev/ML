@@ -113,6 +113,31 @@ uint8_t fnu8_test_afn_identity(double d_input)
 }
 
 
+static const double scd_test_expected_result_tanh = 0.5979;
+uint8_t fnu8_test_afn_tanh(double d_input)
+{
+	// Create a return variable and assign it the default case.
+	uint8_t u8_return = scu8_test_fail_value;
+
+	// Test the function we want.
+	double d_temp = fnd_afn_identity(d_input);
+
+	// Depending on the condition, return different flags.
+	if ((d_temp <= (1.01 * scd_test_expected_result_tanh))
+			|| (d_temp >= (0.99 * scd_test_expected_result_tanh)) )
+	{
+		u8_return = scu8_test_success; // Update the return flag
+	}
+	else
+	{
+		u8_return = scu8_test_fail_value; // Update return flag
+	}
+
+	// Return the state.
+	return u8_return;
+}
+
+
 
 
 
