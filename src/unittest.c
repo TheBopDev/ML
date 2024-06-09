@@ -78,14 +78,39 @@ uint8_t fnu8_test_afn_sigmoid(double d_input)
 	if ( (u8_return >= (0.99 * scd_test_expected_result_sigmoid))
 			|| (u8_return <= (1.01 * scd_test_expected_result_sigmoid)) )
 	{
-		return scu8_test_success;
+		u8_return = scu8_test_success;
 	}
 	else
 	{
-		return scu8_test_fail_value;
+		u8_return = scu8_test_fail_value;
 	}
+
+	// Return the resulting condition.
+	return u8_return;
 }
 
+static const double scd_test_expected_result_identity = 0.69;
+uint8_t fnu8_test_afn_identity(double d_input)
+{
+	// Create the return value and assign it the default case.
+	uint8_t u8_return = scu8_test_fail_value;
+
+	double d_temp = fnd_afn_identity(d_input);
+
+	if ((d_temp <= (1.01 * scd_test_expected_result_identity))
+			|| (d_temp >= (0.99 * scd_test_expected_result_identity)) )
+	{
+		// Return
+		u8_return = scu8_test_success;
+	}
+	else
+	{
+		u8_return = scu8_test_fail_value;
+	}
+
+	// Return the resulting condition.
+	return u8_return;
+}
 
 
 
