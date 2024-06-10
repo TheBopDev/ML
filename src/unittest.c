@@ -139,6 +139,6 @@ uint8_t fnu8_test_afn_tanh(double d_input)
 
 
 
-
+/* EOF unittest.c */
 
 
