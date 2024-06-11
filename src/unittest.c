@@ -139,6 +139,30 @@ uint8_t fnu8_test_afn_tanh(double d_input)
 
 
 
+static const double scd_test_expected_result_relu = 0.69;
+uint8_t fnu8_test_afn_relu(double d_input)
+{
+	// Create return variable and assign it default case (assume failure).
+	uint8_t u8_return = scu8_test_fail_value;
+
+
+	// Test the relu function.
+	double d_temp = fnd_afn_relu(d_input);
+	if ((d_temp <= (1.01 * scd_test_expected_result_relu))
+			|| (d_temp >= (0.99 * scd_test_expected_result_relu)) )
+	{
+		u8_return = scu8_test_success; // Update the return flag
+	}
+	else
+	{
+		u8_return = scu8_test_fail_value; // Update return flag
+	}
+
+
+	// Return the state.
+	return u8_return;
+}
+
 /* EOF unittest.c */
 
 
