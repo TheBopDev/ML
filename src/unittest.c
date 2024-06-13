@@ -163,6 +163,89 @@ uint8_t fnu8_test_afn_relu(double d_input)
 	return u8_return;
 }
 
+
+
+static const double scd_test_expected_result_leaky_relu = 0.69;
+uint8_t fnu8_test_afn_leaky_relu(double d_input)
+{
+	// Create return variable and assign it default case (assume failure).
+	uint8_t u8_return = scu8_test_fail_value;
+
+
+	// Test the relu function.
+	double d_temp = fnd_afn_leaky_relu(d_input);
+	if ((d_temp <= (1.01 * scd_test_expected_result_leaky_relu))
+			|| (d_temp >= (0.99 * scd_test_expected_result_leaky_relu)) )
+	{
+		u8_return = scu8_test_success; // Update the return flag
+	}
+	else
+	{
+		u8_return = scu8_test_fail_value; // Update return flag
+	}
+
+
+	// Return the state.
+	return u8_return;
+}
+
+
+
+static const double scd_test_expected_result_gaussian = 0.69;
+uint8_t fnu8_test_afn_leaky_gaussian(double d_input)
+{
+	// Create return variable and assign it default case (assume failure).
+	uint8_t u8_return = scu8_test_fail_value;
+
+
+	// Test the relu function.
+	double d_temp = fnd_afn_gaussian(d_input);
+	if ((d_temp <= (1.01 * scd_test_expected_result_gaussian))
+			|| (d_temp >= (0.99 * scd_test_expected_result_gaussian)) )
+	{
+		u8_return = scu8_test_success; // Update the return flag
+	}
+	else
+	{
+		u8_return = scu8_test_fail_value; // Update return flag
+	}
+
+
+	// Return the state.
+	return u8_return;
+}
+
+
+
+static const double scd_test_expected_result_binary_step = 0.69;
+uint8_t fnu8_test_afn_binary_step(double d_input)
+{
+	// Create return variable and assign it default case (assume failure).
+	uint8_t u8_return = scu8_test_fail_value;
+
+
+	// Test the relu function.
+	double d_temp = fnd_afn_gaussian(d_input);
+	if ((d_temp <= (1.01 * scd_test_expected_result_gaussian))
+			|| (d_temp >= (0.99 * scd_test_expected_result_gaussian)) )
+	{
+		u8_return = scu8_test_success; // Update the return flag
+	}
+	else
+	{
+		u8_return = scu8_test_fail_value; // Update return flag
+	}
+
+
+	// Return the state.
+	return u8_return;
+}
+
+
+
+
+
+
 /* EOF unittest.c */
 
 
