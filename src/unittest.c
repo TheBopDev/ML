@@ -217,7 +217,7 @@ uint8_t fnu8_test_afn_leaky_gaussian(double d_input)
 
 
 
-static const double scd_test_expected_result_binary_step = 0.69;
+static const double scd_test_expected_result_binary_step = 1.0;
 uint8_t fnu8_test_afn_binary_step(double d_input)
 {
 	// Create return variable and assign it default case (assume failure).
